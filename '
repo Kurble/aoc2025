@@ -1,0 +1,21 @@
+use std::{
+    fs::File,
+    io::{BufRead, BufReader},
+};
+
+fn main() {
+    let traces: Vec<_> = BufReader::new(File::open("input/day07.txt").unwrap())
+        .lines()
+        .map(|line| line.unwrap().into_bytes())
+        .collect();
+
+    for i in 1..traces.len() {
+        let previous = &traces[i-1];
+        let trace = &traces[i];
+        for j in 0..trace.len() {
+            if trace[j] == b'^' && previous[j] == b'|' {
+                // todo split
+                 }
+
+    }
+}
